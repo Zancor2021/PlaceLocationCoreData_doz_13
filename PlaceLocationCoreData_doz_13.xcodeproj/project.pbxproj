@@ -10,10 +10,12 @@
 		D6EBFA5925BB0AC300ABF0CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EBFA5825BB0AC300ABF0CA /* AppDelegate.swift */; };
 		D6EBFA5B25BB0AC300ABF0CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EBFA5A25BB0AC300ABF0CA /* SceneDelegate.swift */; };
 		D6EBFA5E25BB0AC300ABF0CA /* PlaceLocationCoreData_doz_13.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6EBFA5C25BB0AC300ABF0CA /* PlaceLocationCoreData_doz_13.xcdatamodeld */; };
-		D6EBFA6025BB0AC300ABF0CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EBFA5F25BB0AC300ABF0CA /* ContentView.swift */; };
 		D6EBFA6225BB0AC700ABF0CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6EBFA6125BB0AC700ABF0CA /* Assets.xcassets */; };
 		D6EBFA6525BB0AC700ABF0CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6EBFA6425BB0AC700ABF0CA /* Preview Assets.xcassets */; };
 		D6EBFA6825BB0AC700ABF0CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6EBFA6625BB0AC700ABF0CA /* LaunchScreen.storyboard */; };
+		D6EBFA7025BB0B5600ABF0CA /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EBFA6F25BB0B5600ABF0CA /* ListView.swift */; };
+		D6EBFA7225BB0BB100ABF0CA /* ListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EBFA7125BB0BB100ABF0CA /* ListRow.swift */; };
+		D6EBFA7425BB0BE500ABF0CA /* AddMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EBFA7325BB0BE500ABF0CA /* AddMovie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +23,13 @@
 		D6EBFA5825BB0AC300ABF0CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6EBFA5A25BB0AC300ABF0CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D6EBFA5D25BB0AC300ABF0CA /* PlaceLocationCoreData_doz_13.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlaceLocationCoreData_doz_13.xcdatamodel; sourceTree = "<group>"; };
-		D6EBFA5F25BB0AC300ABF0CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D6EBFA6125BB0AC700ABF0CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6EBFA6425BB0AC700ABF0CA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D6EBFA6725BB0AC700ABF0CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6EBFA6925BB0AC700ABF0CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6EBFA6F25BB0B5600ABF0CA /* ListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		D6EBFA7125BB0BB100ABF0CA /* ListRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
+		D6EBFA7325BB0BE500ABF0CA /* AddMovie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMovie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +64,9 @@
 			children = (
 				D6EBFA5825BB0AC300ABF0CA /* AppDelegate.swift */,
 				D6EBFA5A25BB0AC300ABF0CA /* SceneDelegate.swift */,
-				D6EBFA5F25BB0AC300ABF0CA /* ContentView.swift */,
+				D6EBFA7325BB0BE500ABF0CA /* AddMovie.swift */,
+				D6EBFA7125BB0BB100ABF0CA /* ListRow.swift */,
+				D6EBFA6F25BB0B5600ABF0CA /* ListView.swift */,
 				D6EBFA6125BB0AC700ABF0CA /* Assets.xcassets */,
 				D6EBFA6625BB0AC700ABF0CA /* LaunchScreen.storyboard */,
 				D6EBFA6925BB0AC700ABF0CA /* Info.plist */,
@@ -150,8 +156,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6EBFA5925BB0AC300ABF0CA /* AppDelegate.swift in Sources */,
+				D6EBFA7225BB0BB100ABF0CA /* ListRow.swift in Sources */,
 				D6EBFA5B25BB0AC300ABF0CA /* SceneDelegate.swift in Sources */,
-				D6EBFA6025BB0AC300ABF0CA /* ContentView.swift in Sources */,
+				D6EBFA7025BB0B5600ABF0CA /* ListView.swift in Sources */,
+				D6EBFA7425BB0BE500ABF0CA /* AddMovie.swift in Sources */,
 				D6EBFA5E25BB0AC300ABF0CA /* PlaceLocationCoreData_doz_13.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
