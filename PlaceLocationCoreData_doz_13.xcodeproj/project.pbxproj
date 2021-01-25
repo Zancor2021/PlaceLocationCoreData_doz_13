@@ -11,6 +11,9 @@
 		D6DBC44525BEB6B300BB11C2 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DBC44425BEB6B300BB11C2 /* extensions.swift */; };
 		D6DBC44725BEE23700BB11C2 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DBC44625BEE23700BB11C2 /* MyView.swift */; };
 		D6DBC44925BEE5F800BB11C2 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DBC44825BEE5F800BB11C2 /* ImagePicker.swift */; };
+		D6DBC44E25BF0E1A00BB11C2 /* MapViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DBC44D25BF0E1A00BB11C2 /* MapViewUI.swift */; };
+		D6DBC45125BF0EC800BB11C2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DBC45025BF0EC800BB11C2 /* MapKit.framework */; };
+		D6DBC45325BF0F2100BB11C2 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DBC45225BF0F2100BB11C2 /* DetailView.swift */; };
 		D6EBFA5925BB0AC300ABF0CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EBFA5825BB0AC300ABF0CA /* AppDelegate.swift */; };
 		D6EBFA5B25BB0AC300ABF0CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EBFA5A25BB0AC300ABF0CA /* SceneDelegate.swift */; };
 		D6EBFA5E25BB0AC300ABF0CA /* PlaceLocationCoreData_doz_13.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6EBFA5C25BB0AC300ABF0CA /* PlaceLocationCoreData_doz_13.xcdatamodeld */; };
@@ -27,6 +30,9 @@
 		D6DBC44425BEB6B300BB11C2 /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		D6DBC44625BEE23700BB11C2 /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
 		D6DBC44825BEE5F800BB11C2 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		D6DBC44D25BF0E1A00BB11C2 /* MapViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewUI.swift; sourceTree = "<group>"; };
+		D6DBC45025BF0EC800BB11C2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D6DBC45225BF0F2100BB11C2 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		D6EBFA5525BB0AC300ABF0CA /* PlaceLocationCoreData_doz_13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaceLocationCoreData_doz_13.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6EBFA5825BB0AC300ABF0CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6EBFA5A25BB0AC300ABF0CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6DBC45125BF0EC800BB11C2 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,8 +63,17 @@
 			children = (
 				D6DBC44625BEE23700BB11C2 /* MyView.swift */,
 				D6DBC44825BEE5F800BB11C2 /* ImagePicker.swift */,
+				D6DBC44D25BF0E1A00BB11C2 /* MapViewUI.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		D6DBC44F25BF0EC800BB11C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6DBC45025BF0EC800BB11C2 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D6EBFA4C25BB0AC300ABF0CA = {
@@ -65,6 +81,7 @@
 			children = (
 				D6EBFA5725BB0AC300ABF0CA /* PlaceLocationCoreData_doz_13 */,
 				D6EBFA5625BB0AC300ABF0CA /* Products */,
+				D6DBC44F25BF0EC800BB11C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +103,7 @@
 				D6DBC44C25BEFB5E00BB11C2 /* UIKit */,
 				D6EBFA7125BB0BB100ABF0CA /* ListRow.swift */,
 				D6EBFA6F25BB0B5600ABF0CA /* ListView.swift */,
+				D6DBC45225BF0F2100BB11C2 /* DetailView.swift */,
 				D6DBC44225BEB40E00BB11C2 /* DataController.swift */,
 				D6EBFA6125BB0AC700ABF0CA /* Assets.xcassets */,
 				D6EBFA6625BB0AC700ABF0CA /* LaunchScreen.storyboard */,
@@ -176,8 +194,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6DBC44325BEB40E00BB11C2 /* DataController.swift in Sources */,
+				D6DBC45325BF0F2100BB11C2 /* DetailView.swift in Sources */,
 				D6EBFA5925BB0AC300ABF0CA /* AppDelegate.swift in Sources */,
 				D6EBFA7225BB0BB100ABF0CA /* ListRow.swift in Sources */,
+				D6DBC44E25BF0E1A00BB11C2 /* MapViewUI.swift in Sources */,
 				D6DBC44725BEE23700BB11C2 /* MyView.swift in Sources */,
 				D6DBC44525BEB6B300BB11C2 /* extensions.swift in Sources */,
 				D6EBFA5B25BB0AC300ABF0CA /* SceneDelegate.swift in Sources */,

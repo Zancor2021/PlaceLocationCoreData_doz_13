@@ -20,7 +20,9 @@ struct ListView: View {
     NavigationView {
       List {
         ForEach(self.dm.allPlace, id: \.id) {
-             ListRow(place: $0)
+           
+                ListRow(place: $0)
+            
         }.onDelete(perform: dm.deletePlace(at:))
         
       }.onAppear{

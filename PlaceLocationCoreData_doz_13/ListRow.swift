@@ -12,6 +12,7 @@ struct ListRow: View {
        @State var imageUI: UIImage? = nil
 
   var body: some View {
+    NavigationLink(destination: DetailView(p:place)){
     VStack(alignment: .leading) {
        HStack {
          image?.resizable().frame(width: 50.0, height: 50.0)
@@ -28,7 +29,7 @@ struct ListRow: View {
                .font(.caption)
               }
             }
-        
+        }
        }.onAppear{
         self.imageUI = UIImage(data: self.place.img!)
         self.image = Image(uiImage: self.imageUI!)
