@@ -18,9 +18,15 @@ class DataController:ObservableObject{
     var managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     //var getTest = (UIApplication.shared.delegate as! AppDelegate).test
+    func getPath2()->URL{
+           let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("todos8.plist")
+           print(path)
+          return path
+       }
     
     init(){
         //print(getTest)
+        getPath2()
     }
     
     
