@@ -39,7 +39,7 @@ class DataController:ObservableObject{
    
     init(){
           //print(getTest)
-          //getPath2()
+       getPath2()
         
       }
     

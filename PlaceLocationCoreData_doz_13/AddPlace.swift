@@ -55,14 +55,19 @@ struct AddPlace: View {
         
         Section {
               Section(header: Text("Choose Image")) {
-             image?.resizable().frame(width: 32.0, height: 32.0)
+                HStack{
+             image?.resizable().frame(width: 50.0, height: 50.0)
             Button(action:{
                 self.showImagePicker = true
             }) {
               Text("add image")
-            }
+                    }}
+              }.onAppear{
+                self.image = Image("default_image")
+                self.imageUI = UIImage(named: "default_image")
             }
         }.sheet(isPresented: $showImagePicker) {
+           
                ImagePicker(sourceType: .photoLibrary) { image in
                    self.imageUI = image
                    self.image = Image(uiImage: image)

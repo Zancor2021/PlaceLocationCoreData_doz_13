@@ -3,23 +3,37 @@ import SwiftUI
 
 struct ListRow: View {
   let place: Place
-  static let releaseFormatter: DateFormatter = {
+  let releaseFormatter: DateFormatter = {
     let formatter = DateFormatter()
     formatter.dateStyle = .long
     return formatter
   }()
+    @State var image: Image? = nil
+       @State var imageUI: UIImage? = nil
 
   var body: some View {
     VStack(alignment: .leading) {
-      place.title.map(Text.init)
-        .font(.title)
-      HStack {
-       Text("\(place.category)")
-          .font(.caption)
-        Spacer()
-       Text("\(place.ranking)")
-       .font(.caption)
-      }
+       HStack {
+         image?.resizable().frame(width: 50.0, height: 50.0)
+         VStack{
+                place.title.map(Text.init)
+                .font(.title)
+              HStack {
+               Text("\(place.category)")
+                  .font(.caption)
+                Text("\(releaseFormatter.string(from: place.date!) )")
+                .font(.caption)
+                Spacer()
+               Text("\(place.ranking)")
+               .font(.caption)
+              }
+            }
+        
+       }.onAppear{
+        self.imageUI = UIImage(data: self.place.img!)
+        self.image = Image(uiImage: self.imageUI!)
+        }
+        
     }
   }
 }
