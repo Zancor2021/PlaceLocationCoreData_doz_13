@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D6DBC44325BEB40E00BB11C2 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DBC44225BEB40E00BB11C2 /* DataController.swift */; };
+		D6DBC44525BEB6B300BB11C2 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DBC44425BEB6B300BB11C2 /* extensions.swift */; };
 		D6EBFA5925BB0AC300ABF0CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EBFA5825BB0AC300ABF0CA /* AppDelegate.swift */; };
 		D6EBFA5B25BB0AC300ABF0CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EBFA5A25BB0AC300ABF0CA /* SceneDelegate.swift */; };
 		D6EBFA5E25BB0AC300ABF0CA /* PlaceLocationCoreData_doz_13.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6EBFA5C25BB0AC300ABF0CA /* PlaceLocationCoreData_doz_13.xcdatamodeld */; };
@@ -15,10 +17,12 @@
 		D6EBFA6825BB0AC700ABF0CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6EBFA6625BB0AC700ABF0CA /* LaunchScreen.storyboard */; };
 		D6EBFA7025BB0B5600ABF0CA /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EBFA6F25BB0B5600ABF0CA /* ListView.swift */; };
 		D6EBFA7225BB0BB100ABF0CA /* ListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EBFA7125BB0BB100ABF0CA /* ListRow.swift */; };
-		D6EBFA7425BB0BE500ABF0CA /* AddMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EBFA7325BB0BE500ABF0CA /* AddMovie.swift */; };
+		D6EBFA7425BB0BE500ABF0CA /* AddPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EBFA7325BB0BE500ABF0CA /* AddPlace.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D6DBC44225BEB40E00BB11C2 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		D6DBC44425BEB6B300BB11C2 /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		D6EBFA5525BB0AC300ABF0CA /* PlaceLocationCoreData_doz_13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaceLocationCoreData_doz_13.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6EBFA5825BB0AC300ABF0CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6EBFA5A25BB0AC300ABF0CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,7 +33,7 @@
 		D6EBFA6925BB0AC700ABF0CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6EBFA6F25BB0B5600ABF0CA /* ListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		D6EBFA7125BB0BB100ABF0CA /* ListRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
-		D6EBFA7325BB0BE500ABF0CA /* AddMovie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMovie.swift; sourceTree = "<group>"; };
+		D6EBFA7325BB0BE500ABF0CA /* AddPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlace.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +66,13 @@
 		D6EBFA5725BB0AC300ABF0CA /* PlaceLocationCoreData_doz_13 */ = {
 			isa = PBXGroup;
 			children = (
+				D6DBC44425BEB6B300BB11C2 /* extensions.swift */,
 				D6EBFA5825BB0AC300ABF0CA /* AppDelegate.swift */,
 				D6EBFA5A25BB0AC300ABF0CA /* SceneDelegate.swift */,
-				D6EBFA7325BB0BE500ABF0CA /* AddMovie.swift */,
+				D6EBFA7325BB0BE500ABF0CA /* AddPlace.swift */,
 				D6EBFA7125BB0BB100ABF0CA /* ListRow.swift */,
 				D6EBFA6F25BB0B5600ABF0CA /* ListView.swift */,
+				D6DBC44225BEB40E00BB11C2 /* DataController.swift */,
 				D6EBFA6125BB0AC700ABF0CA /* Assets.xcassets */,
 				D6EBFA6625BB0AC700ABF0CA /* LaunchScreen.storyboard */,
 				D6EBFA6925BB0AC700ABF0CA /* Info.plist */,
@@ -155,11 +161,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6DBC44325BEB40E00BB11C2 /* DataController.swift in Sources */,
 				D6EBFA5925BB0AC300ABF0CA /* AppDelegate.swift in Sources */,
 				D6EBFA7225BB0BB100ABF0CA /* ListRow.swift in Sources */,
+				D6DBC44525BEB6B300BB11C2 /* extensions.swift in Sources */,
 				D6EBFA5B25BB0AC300ABF0CA /* SceneDelegate.swift in Sources */,
 				D6EBFA7025BB0B5600ABF0CA /* ListView.swift in Sources */,
-				D6EBFA7425BB0BE500ABF0CA /* AddMovie.swift in Sources */,
+				D6EBFA7425BB0BE500ABF0CA /* AddPlace.swift in Sources */,
 				D6EBFA5E25BB0AC300ABF0CA /* PlaceLocationCoreData_doz_13.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

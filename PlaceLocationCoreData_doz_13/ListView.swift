@@ -6,33 +6,7 @@ import SwiftUI
     import CoreData
     
     
-    class DataController:ObservableObject{
-        
-        var managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        
-        @Published var allPlace:[Place] = []
-        
-        func getData(){
-            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Place")
-            allPlace = try! managedObjectContext.fetch(fetchRequest) as! [Place]
-            print(allPlace[0].title!)
-        }
-        
-        func createData(){
-            
-            let p:Place = Place(context: managedObjectContext)
-                p.id = UUID()
-                p.category = 0
-                p.title = "Beach"
-                p.lat = 52.13123121
-                p.lon = 13.13123121
-                p.img  = UIImage().jpegData(compressionQuality: 0.9)
-                p.ranking = 4
-                p.date = Date()
-            try! managedObjectContext.save()
-            getData()
-         }
-    }
+
     
     
     
@@ -47,17 +21,19 @@ struct ListView: View {
       List {
         ForEach(self.dm.allPlace, id: \.title) {
              ListRow(place: $0)
-        }
+        }.onDelete(perform: dm.deletePlace(at:))
         
       }.onAppear{
-        self.dm.createData()
+        //self.dm.createData()
         self.dm.getData()
         
       }
-      .sheet(isPresented: $isPresented) {
-        AddMovie()
+      .sheet(isPresented: $isPresented.didSet(execute: { (state) in
+        if(!self.isPresented){ self.dm.getData() }
+      })) {
+        AddPlace(isPresented: self.$isPresented)
       }
-      .navigationBarTitle(Text("Fave Flicks"))
+      .navigationBarTitle(Text("Places"),displayMode: .inline)
       .navigationBarItems(trailing:
         Button(action: { self.isPresented.toggle() }) {
           Image(systemName: "plus")

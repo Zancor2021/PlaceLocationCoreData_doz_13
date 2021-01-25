@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct AddMovie: View {
+struct AddPlace: View {
   static let DefaultMovieTitle = "An untitled masterpiece"
   static let DefaultMovieGenre = "Genre-buster"
 
@@ -9,6 +9,8 @@ struct AddMovie: View {
   @State var releaseDate = Date()
  
  @ObservedObject var dm:DataController = DataController()
+    
+    @Binding var isPresented:Bool
     
   var body: some View {
     NavigationView {
@@ -27,7 +29,10 @@ struct AddMovie: View {
           }
         }
         Section {
-            Button(action:{ self.dm.createData()}) {
+            Button(action:{
+                self.dm.createData()
+                self.isPresented = false
+            }) {
               Text("add")
             }
          
