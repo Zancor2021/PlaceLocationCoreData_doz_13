@@ -24,10 +24,7 @@ class DataController:ObservableObject{
           return path
        }
     
-    init(){
-        //print(getTest)
-        getPath2()
-    }
+  
     
     
     @Published var allPlace:[Place] = []
@@ -39,17 +36,24 @@ class DataController:ObservableObject{
         //print(allPlace[0].title!)
     }
     
-    func createData(){
+   
+    init(){
+          //print(getTest)
+          //getPath2()
         
-        let p:Place = Place(context: managedObjectContext)
-            p.id = UUID()
-            p.category = 0        // TExtfield
-            p.title = "Adlon"    // TExtfield
-            p.lat = 52.13123121 // TExtfield
-            p.lon = 13.13123121 // TExtfield
-            p.img  = UIImage().jpegData(compressionQuality: 0.9)
-            p.ranking = 4  // Stepper
-            p.date = Date() //DatePicker
+      }
+    
+    func createData(t:String,lat:Double,lon:Double,c:Int16,i:Data,r:Int16,d:Date){
+         let pSave:Place = Place(context: managedObjectContext)
+       
+            pSave.id = UUID()
+        pSave.category = c      // Picker
+        pSave.title = t   // TExtfield
+        pSave.lat = lat // TExtfield
+        pSave.lon = lon // TExtfield
+            pSave.img  = i
+        pSave.ranking = r  // Stepper
+        pSave.date = d //DatePicker
         try! managedObjectContext.save()
         getData()
      }
