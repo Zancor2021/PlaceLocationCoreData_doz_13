@@ -7,7 +7,9 @@ struct AddPlace: View {
     
     @Binding var isPresented:Bool
     
-    
+    @State var showImagePicker: Bool = false
+     @State var image: Image? = nil
+    @State var imageUI: UIImage? = nil
     
     @State var title:String = "Alex Home"
     @State var lat:String = "52.515438"
@@ -47,14 +49,33 @@ struct AddPlace: View {
             selection: $date,
             displayedComponents: .date) {
               Text("Release Date").foregroundColor(Color(.gray))
+              //  UIToSwiftView().frame(width: 100, height: 100, alignment: .center)
           }
         }
+        
+        Section {
+              Section(header: Text("Choose Image")) {
+             image?.resizable().frame(width: 32.0, height: 32.0)
+            Button(action:{
+                self.showImagePicker = true
+            }) {
+              Text("add image")
+            }
+            }
+        }.sheet(isPresented: $showImagePicker) {
+               ImagePicker(sourceType: .photoLibrary) { image in
+                   self.imageUI = image
+                   self.image = Image(uiImage: image)
+            }}
+        
+        
+        
         Section {
             Button(action:{
                
                 
                 
-                self.dm.createData(t:self.title,lat:Double(self.lat)!,lon:Double(self.lon)!,c:Int16(self.category),i:self.img,r:Int16(self.ranking),d:self.date)
+                self.dm.createData(t:self.title,lat:Double(self.lat)!,lon:Double(self.lon)!,c:Int16(self.category),i:(self.imageUI?.jpegData(compressionQuality: 0.9)!)!,r:Int16(self.ranking),d:self.date)
                 self.isPresented = false
                 
                 

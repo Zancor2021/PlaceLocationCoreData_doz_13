@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		D6DBC44325BEB40E00BB11C2 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DBC44225BEB40E00BB11C2 /* DataController.swift */; };
 		D6DBC44525BEB6B300BB11C2 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DBC44425BEB6B300BB11C2 /* extensions.swift */; };
+		D6DBC44725BEE23700BB11C2 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DBC44625BEE23700BB11C2 /* MyView.swift */; };
+		D6DBC44925BEE5F800BB11C2 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DBC44825BEE5F800BB11C2 /* ImagePicker.swift */; };
+		D6DBC44B25BEE7AC00BB11C2 /* MySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DBC44A25BEE7AC00BB11C2 /* MySheet.swift */; };
 		D6EBFA5925BB0AC300ABF0CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EBFA5825BB0AC300ABF0CA /* AppDelegate.swift */; };
 		D6EBFA5B25BB0AC300ABF0CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EBFA5A25BB0AC300ABF0CA /* SceneDelegate.swift */; };
 		D6EBFA5E25BB0AC300ABF0CA /* PlaceLocationCoreData_doz_13.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6EBFA5C25BB0AC300ABF0CA /* PlaceLocationCoreData_doz_13.xcdatamodeld */; };
@@ -23,6 +26,9 @@
 /* Begin PBXFileReference section */
 		D6DBC44225BEB40E00BB11C2 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		D6DBC44425BEB6B300BB11C2 /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		D6DBC44625BEE23700BB11C2 /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
+		D6DBC44825BEE5F800BB11C2 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		D6DBC44A25BEE7AC00BB11C2 /* MySheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySheet.swift; sourceTree = "<group>"; };
 		D6EBFA5525BB0AC300ABF0CA /* PlaceLocationCoreData_doz_13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaceLocationCoreData_doz_13.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6EBFA5825BB0AC300ABF0CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6EBFA5A25BB0AC300ABF0CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +76,9 @@
 				D6EBFA5825BB0AC300ABF0CA /* AppDelegate.swift */,
 				D6EBFA5A25BB0AC300ABF0CA /* SceneDelegate.swift */,
 				D6EBFA7325BB0BE500ABF0CA /* AddPlace.swift */,
+				D6DBC44625BEE23700BB11C2 /* MyView.swift */,
+				D6DBC44825BEE5F800BB11C2 /* ImagePicker.swift */,
+				D6DBC44A25BEE7AC00BB11C2 /* MySheet.swift */,
 				D6EBFA7125BB0BB100ABF0CA /* ListRow.swift */,
 				D6EBFA6F25BB0B5600ABF0CA /* ListView.swift */,
 				D6DBC44225BEB40E00BB11C2 /* DataController.swift */,
@@ -164,9 +173,12 @@
 				D6DBC44325BEB40E00BB11C2 /* DataController.swift in Sources */,
 				D6EBFA5925BB0AC300ABF0CA /* AppDelegate.swift in Sources */,
 				D6EBFA7225BB0BB100ABF0CA /* ListRow.swift in Sources */,
+				D6DBC44725BEE23700BB11C2 /* MyView.swift in Sources */,
+				D6DBC44B25BEE7AC00BB11C2 /* MySheet.swift in Sources */,
 				D6DBC44525BEB6B300BB11C2 /* extensions.swift in Sources */,
 				D6EBFA5B25BB0AC300ABF0CA /* SceneDelegate.swift in Sources */,
 				D6EBFA7025BB0B5600ABF0CA /* ListView.swift in Sources */,
+				D6DBC44925BEE5F800BB11C2 /* ImagePicker.swift in Sources */,
 				D6EBFA7425BB0BE500ABF0CA /* AddPlace.swift in Sources */,
 				D6EBFA5E25BB0AC300ABF0CA /* PlaceLocationCoreData_doz_13.xcdatamodeld in Sources */,
 			);
