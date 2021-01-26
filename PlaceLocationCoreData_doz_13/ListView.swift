@@ -18,6 +18,13 @@ struct ListView: View {
   var body: some View {
     
     NavigationView {
+        VStack{
+            HStack{
+            Slider(value: $dm.currentDistance.didSet(execute: { (value) in
+                self.dm.getData()
+                }),in: 1...10, step: 0.2).padding()
+                 Text("\(dm.currentDistance)").modifier(SliderTxt()).padding()
+            }
       List {
         ForEach(self.dm.allPlace, id: \.id) {
            
@@ -25,7 +32,7 @@ struct ListView: View {
             
         }.onDelete(perform: dm.deletePlace(at:))
         
-      }.onAppear{
+            }}.onAppear{
         //self.dm.createData()
         self.dm.getData()
         

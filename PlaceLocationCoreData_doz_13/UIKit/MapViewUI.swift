@@ -25,7 +25,7 @@ struct MapViewUI: UIViewRepresentable {
         let mapView = MKMapView()
         
         mapView.setRegion(region, animated: false)
-        mapView.addAnnotation(Pin(title: "lol", coordinate: CLLocationCoordinate2D(latitude: 52.515438, longitude: 13.470627), info: "Hallo"))
+        mapView.addAnnotation(Pin(title: "lol", coordinate: CLLocationCoordinate2D(latitude: region.center.latitude, longitude: region.center.longitude), info: "Hallo"))
         mapView.mapType = mapType
         return mapView
     }

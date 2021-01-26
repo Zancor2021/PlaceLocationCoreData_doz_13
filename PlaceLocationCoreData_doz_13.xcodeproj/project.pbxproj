@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D62D527F25C0130500DA9B47 /* Modi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62D527E25C0130400DA9B47 /* Modi.swift */; };
 		D6DBC44325BEB40E00BB11C2 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DBC44225BEB40E00BB11C2 /* DataController.swift */; };
 		D6DBC44525BEB6B300BB11C2 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DBC44425BEB6B300BB11C2 /* extensions.swift */; };
 		D6DBC44725BEE23700BB11C2 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DBC44625BEE23700BB11C2 /* MyView.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D62D527E25C0130400DA9B47 /* Modi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modi.swift; sourceTree = "<group>"; };
 		D6DBC44225BEB40E00BB11C2 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		D6DBC44425BEB6B300BB11C2 /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		D6DBC44625BEE23700BB11C2 /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 		D6EBFA5725BB0AC300ABF0CA /* PlaceLocationCoreData_doz_13 */ = {
 			isa = PBXGroup;
 			children = (
+				D62D527E25C0130400DA9B47 /* Modi.swift */,
 				D6DBC44425BEB6B300BB11C2 /* extensions.swift */,
 				D6EBFA5825BB0AC300ABF0CA /* AppDelegate.swift */,
 				D6EBFA5A25BB0AC300ABF0CA /* SceneDelegate.swift */,
@@ -197,6 +200,7 @@
 				D6DBC45325BF0F2100BB11C2 /* DetailView.swift in Sources */,
 				D6EBFA5925BB0AC300ABF0CA /* AppDelegate.swift in Sources */,
 				D6EBFA7225BB0BB100ABF0CA /* ListRow.swift in Sources */,
+				D62D527F25C0130500DA9B47 /* Modi.swift in Sources */,
 				D6DBC44E25BF0E1A00BB11C2 /* MapViewUI.swift in Sources */,
 				D6DBC44725BEE23700BB11C2 /* MyView.swift in Sources */,
 				D6DBC44525BEB6B300BB11C2 /* extensions.swift in Sources */,

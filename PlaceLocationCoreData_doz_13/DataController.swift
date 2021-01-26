@@ -9,10 +9,12 @@
 import Foundation
 import CoreData
 import UIKit
+import CoreLocation
 
 class DataController:ObservableObject{
     
      @Published var categories = ["sight","food", "club","cultur"]
+    @Published var currentDistance:Double = 3
     //HOLE BESTEHENDE VERBINDUNG ZUR DB -> persistentContainer
     //persistentContainer.viewContext -> Schnitstelle für methoden wie save,fetch,update ...
     var managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -28,13 +30,33 @@ class DataController:ObservableObject{
     
     
     @Published var allPlace:[Place] = []
-    
+    @Published var allPlaceLoad:[Place] = []
     func getData(){
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Place")
         
-        allPlace = try! managedObjectContext.fetch(fetchRequest) as! [Place]
+        allPlaceLoad = try! managedObjectContext.fetch(fetchRequest) as! [Place]
         //print(allPlace[0].title!)
+        filterData()
     }
+    
+    func filterData(){
+        allPlace = []
+        let coordinate1 = CLLocation(latitude: 52.515176, longitude:13.470591)
+        
+
+        for item in allPlaceLoad{
+            let coordinate2 = CLLocation(latitude: item.lat, longitude: item.lon)
+            if(calculateDistance(gps1: coordinate1, gps2: coordinate2) <= currentDistance ){
+                //item.distance = calculateDistance(gps1: coordinate1, gps2: coordinate2)
+                allPlace.append(item)
+            }
+        }
+    }
+    
+    func calculateDistance(gps1:CLLocation,gps2:CLLocation)-> Double{
+        return gps1.distance(from: gps2)/1000
+    }
+    
     
    
     init(){
